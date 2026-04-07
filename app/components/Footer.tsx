@@ -1,4 +1,4 @@
-import { Github, Linkedin, Heart } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export function Footer() {
   const scrollTo = (id: string) => {
@@ -88,9 +88,7 @@ export function Footer() {
             className="text-[#555] text-[13px] flex items-center justify-center gap-1"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            © 2026 Nikhil Kadiyala. Made with{" "}
-            <Heart size={12} fill="#665DCD" color="#665DCD" />
-            {" "}and lots of coffee.
+            © 2026 Nikhil Kadiyala. Modified from an online Figma theme.
           </p>
         </div>
       </div>
