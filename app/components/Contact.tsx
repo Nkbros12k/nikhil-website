@@ -9,12 +9,40 @@ export function Contact() {
 
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-    setForm({ name: "", email: "", subject: "", message: "" });
+    setSending(true);
+    setError(false);
+
+    try {
+      const res = await fetch("https://formspree.io/f/xbdpblyk", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+        }),
+      });
+
+      if (res.ok) {
+        setSent(true);
+        setForm({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSent(false), 4000);
+      } else {
+        setError(true);
+        setTimeout(() => setError(false), 4000);
+      }
+    } catch {
+      setError(true);
+      setTimeout(() => setError(false), 4000);
+    } finally {
+      setSending(false);
+    }
   };
 
   const contactInfo = [
@@ -281,7 +309,11 @@ export function Contact() {
                   />
                   <span className="relative flex items-center gap-2">
                     {sent ? (
-                      "Message Sent! ✓"
+                      "Message Sent!"
+                    ) : error ? (
+                      "Failed to send — try email instead"
+                    ) : sending ? (
+                      "Sending..."
                     ) : (
                       <>
                         <Send size={16} />
