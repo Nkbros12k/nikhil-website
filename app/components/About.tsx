@@ -170,7 +170,7 @@ export function About() {
               className="text-[#b0b3b8] mb-5"
               style={{ fontFamily: "Inter, sans-serif", fontSize: "17px", lineHeight: "28px" }}
             >
-              I'm an incoming Informatics student at UT Austin majoring in Human-Centered Data Science
+              I'm an incoming Informatics student at UT Austin majoring in Informatics specializing in Human-Centered Data Science
               & Cybersecurity. I build things that solve real problems — from AI debate tools to
               algorithmic trading bots to platforms connecting thousands of blood donors globally.
             </p>
