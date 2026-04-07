@@ -88,7 +88,7 @@ export function Footer() {
             className="text-[#555] text-[13px] flex items-center justify-center gap-1"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            © 2026 Nikhil Kadiyala. Modified from an online Figma theme.
+            © 2026 Nikhil Kadiyala. Modified from an online Figma theme ツ
           </p>
         </div>
       </div>
