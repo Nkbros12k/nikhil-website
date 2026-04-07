@@ -37,7 +37,7 @@ export function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div
-              className="w-7 h-7 rounded-[4px]"
+              className="w-7 h-7 rounded-full"
               style={{
                 background: "linear-gradient(135deg, #665DCD, #5FA4E6, #D2AB67)",
               }}

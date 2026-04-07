@@ -29,7 +29,7 @@ export function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div
-            className="w-8 h-8 rounded-[4px]"
+            className="w-8 h-8 rounded-full"
             style={{ background: "linear-gradient(135deg, #665DCD, #5FA4E6, #D2AB67)" }}
           />
           <span
