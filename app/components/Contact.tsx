@@ -311,7 +311,7 @@ export function Contact() {
                     {sent ? (
                       "Message Sent!"
                     ) : error ? (
-                      "Failed to send — try email instead"
+                      "Failed to send. Try email instead."
                     ) : sending ? (
                       "Sending..."
                     ) : (

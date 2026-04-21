@@ -26,19 +26,9 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-[1100px] mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div
-            className="w-8 h-8 rounded-full"
-            style={{ background: "linear-gradient(135deg, #665DCD, #5FA4E6, #D2AB67)" }}
-          />
-          <span
-            className="text-white text-[18px]"
-            style={{ fontFamily: "Inter, sans-serif", fontWeight: 600 }}
-          >
-            Nikhil K.
-          </span>
-        </div>
+        {/* Spacer (logo removed) */}
+        <div />
+
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">

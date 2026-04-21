@@ -15,8 +15,8 @@ const skills = [
   {
     icon: Shield,
     title: "Cybersecurity",
-    subtitle: "National Cyber Scholar & GIAC Certified",
-    desc: "SANS Foundations + GIAC certification. Ranked in PicoCTF, TryHackMe, and HolidayHack CTF competitions. Trained in digital forensics and ethical hacking at UT Austin TACC GenCyber.",
+    subtitle: "National Cyber Scholar, CTF Competitor",
+    desc: "Ranked in PicoCTF, TryHackMe, and HolidayHack CTF competitions. CyberPatriot State Semi-Finalist team captain. Trained in digital forensics and ethical hacking at UT Austin TACC GenCyber.",
     tags: ["Ethical Hacking", "OSINT", "Pen Testing", "CTFs"],
     gradient: "linear-gradient(135deg, #5FA4E6, #D2AB67)",
   },

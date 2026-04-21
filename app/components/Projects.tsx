@@ -62,7 +62,7 @@ const projects = [
   },
   {
     title: "Raspberry Pi Ecosystem",
-    desc: "Automated ecosystem integrating a 3D printer, Pi-Hole ad-blocker, and remote access — all controlled via custom Python scripts on a Raspberry Pi.",
+    desc: "Automated ecosystem integrating a 3D printer, Pi-Hole ad-blocker, and remote access, all controlled via custom Python scripts on a Raspberry Pi.",
     image:
       "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
     tags: ["Raspberry Pi", "Python", "3D Printing", "Networking"],

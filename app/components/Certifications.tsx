@@ -13,9 +13,9 @@ const certifications = [
   },
   {
     icon: Award,
-    title: "SANS Foundations & GIAC Certification",
-    org: "SANS Institute / GIAC",
-    desc: "Industry-recognized certification validating foundational cybersecurity knowledge and practical skills.",
+    title: "SANS Foundations Training",
+    org: "SANS Institute",
+    desc: "Completed the SANS Foundations cybersecurity training covering core security concepts and practical skills.",
     color: "#5FA4E6",
   },
   {
@@ -43,7 +43,7 @@ const achievements = [
   },
   {
     icon: Trophy,
-    title: "State Semi-Finalist — CyberPatriot",
+    title: "State Semi-Finalist, CyberPatriot",
     desc: "Led a team of 5 to State Semi-Finalist position in ethical hacking and network security competition.",
     color: "#5FA4E6",
   },
