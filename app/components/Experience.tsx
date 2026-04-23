@@ -5,6 +5,21 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
+    role: "Tech Director + External Technologies (Incoming)",
+    company: "Sustainable Building Initiative",
+    period: "Starting Fall 2026",
+    location: "Austin, TX",
+    points: [
+      "Leading a 10 to 15 person tech team building the organization website and related technical projects",
+      "Reviewing and approving all team work before branches are merged to main",
+      "Reporting directly to the Head of Club on tech team health and project progress",
+      "Acting as primary technical point of contact for client-facing communications",
+      "Running recruiting, interviews, and onboarding for new tech team members",
+      "Leading the External Technologies function with access to industry technical research and emerging tooling",
+    ],
+    color: "#D2AB67",
+  },
+  {
     role: "Software Developer, Tech Team",
     company: "Sustainable Building Initiative",
     period: "Feb 2026 to Present",

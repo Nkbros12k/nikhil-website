@@ -6,41 +6,52 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const projects = [
   {
+    title: "NetSentinel",
+    desc: "Real-time ML-powered network intrusion detection. XGBoost multi-class classifier on NSL-KDD (77% accuracy, 96% DoS precision), FastAPI backend with WebSocket threat broadcasts, React + 3D globe dashboard, and Kubernetes auto-scaling.",
+    image:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    tags: ["Python", "XGBoost", "FastAPI", "Kubernetes"],
+    gradient: "linear-gradient(135deg, #665DCD 0%, #5FA4E6 100%)",
+    featured: true,
+    github: "https://github.com/Nkbros12k/netsentinel",
+    live: "",
+  },
+  {
     title: "Perspect AI",
     desc: "Real-time AI debate engine where expert personas argue any topic, then generate a personalized study guide. Built at the Hooked on Claude Hackathon.",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
     tags: ["React", "Express", "Gemini AI", "SSE Streaming"],
-    gradient: "linear-gradient(135deg, #665DCD 0%, #5FA4E6 100%)",
+    gradient: "linear-gradient(135deg, #5FA4E6 0%, #D2AB67 100%)",
     featured: true,
     github: "https://github.com/Nkbros12k/claudehackathon26",
     live: "https://claudehackathon26-six.vercel.app",
   },
   {
-    title: "TradBot",
-    desc: "Algorithmic trading bot with EMA crossover strategy, ATR-based dynamic exits, live Flask dashboard, Telegram alerts, and IV/volume scanning.",
+    title: "SBI Reports Feature",
+    desc: "Supabase-backed Reports feature for the UT Austin Sustainable Building Initiative org website. Postgres schema, validated image storage bucket, and Next.js front-end integration, shipped end to end.",
     image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    tags: ["Python", "Flask", "Alpaca API", "Ollama"],
-    gradient: "linear-gradient(135deg, #5FA4E6 0%, #D2AB67 100%)",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    tags: ["Next.js", "Supabase", "Postgres", "Bun"],
+    gradient: "linear-gradient(135deg, #D2AB67 0%, #665DCD 100%)",
     featured: true,
-    github: "",
+    github: "https://github.com/Nkbros12k/sbi-reports-case-study",
     live: "",
   },
   {
-    title: "Gravity-Zero",
-    desc: "A fully local AI-powered IDE with autonomous 3-node agent pipeline (Planner, Coder, Reviewer) using LM Studio and Monaco Editor.",
+    title: "TradBot",
+    desc: "Algorithmic paper trading bot using RSI + SMA signals with auto take-profit at +3% and stop-loss at -1.5%. Live Flask dashboard with 15s auto-refresh, day P/L, open positions, and full trade feed. Market-hours aware.",
     image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    tags: ["Python", "FastAPI", "React", "LM Studio"],
-    gradient: "linear-gradient(135deg, #D2AB67 0%, #665DCD 100%)",
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    tags: ["Python", "Flask", "RSI", "SMA"],
+    gradient: "linear-gradient(135deg, #5FA4E6 0%, #665DCD 100%)",
     featured: false,
-    github: "",
+    github: "https://github.com/Nkbros12k/tradbot",
     live: "",
   },
   {
     title: "Blood Buddy",
-    desc: "Nonprofit platform connecting 8,000+ global blood donors and recipients, matching by location and blood type. Enabled 100+ successful transfers.",
+    desc: "Nonprofit platform connecting 8,000+ global blood donors and recipients, matching by location and blood type. Enabled 100+ successful transfers worldwide. Founded as a high-schooler.",
     image:
       "https://images.unsplash.com/photo-1615461066841-6116e61058f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
     tags: ["Full-Stack", "Database", "Nonprofit"],
@@ -50,14 +61,47 @@ const projects = [
     live: "",
   },
   {
+    title: "Gemini Chat Exporter",
+    desc: "Public Chrome extension that exports Google Gemini conversations to JSON, Markdown, TXT, CSV, or PDF with one click.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    tags: ["JavaScript", "Chrome Ext", "PDF Export"],
+    gradient: "linear-gradient(135deg, #D2AB67 0%, #5FA4E6 100%)",
+    featured: false,
+    github: "https://github.com/Nkbros12k/gemini-exporter",
+    live: "",
+  },
+  {
+    title: "Next.js Financial Dashboard",
+    desc: "Full-stack financial dashboard with authentication, invoicing, and customer management. Built with Next.js App Router, Postgres, and NextAuth.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    tags: ["Next.js", "Postgres", "NextAuth", "TypeScript"],
+    gradient: "linear-gradient(135deg, #5FA4E6 0%, #D2AB67 100%)",
+    featured: false,
+    github: "https://github.com/Nkbros12k/nextjs-dashboard",
+    live: "",
+  },
+  {
     title: "DataHack 2026",
     desc: "UT Austin MLDS competition: predicted music streaming skip behavior and optimized customer lifetime value using UMAP clustering and ensemble ML models.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
     tags: ["Python", "LightGBM", "CatBoost", "UMAP"],
-    gradient: "linear-gradient(135deg, #5FA4E6 0%, #665DCD 100%)",
+    gradient: "linear-gradient(135deg, #665DCD 0%, #5FA4E6 100%)",
     featured: false,
     github: "https://github.com/MLDS-UT-Austin/mlds-datahack-2026-akhilkotturi",
+    live: "",
+  },
+  {
+    title: "FindMyItem App",
+    desc: "ML-powered accessibility app using Google Teachable Machine to help seniors locate misplaced items. Trained a custom object recognition model with a senior-friendly interface.",
+    image:
+      "https://images.unsplash.com/photo-1635488640163-e9bf90aaa30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    tags: ["Python", "ML", "Accessibility"],
+    gradient: "linear-gradient(135deg, #D2AB67 0%, #665DCD 100%)",
+    featured: false,
+    github: "",
     live: "",
   },
   {
@@ -65,8 +109,8 @@ const projects = [
     desc: "Automated ecosystem integrating a 3D printer, Pi-Hole ad-blocker, and remote access, all controlled via custom Python scripts on a Raspberry Pi.",
     image:
       "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    tags: ["Raspberry Pi", "Python", "3D Printing", "Networking"],
-    gradient: "linear-gradient(135deg, #D2AB67 0%, #5FA4E6 100%)",
+    tags: ["Raspberry Pi", "Python", "Pi-Hole", "Networking"],
+    gradient: "linear-gradient(135deg, #5FA4E6 0%, #665DCD 100%)",
     featured: false,
     github: "",
     live: "",

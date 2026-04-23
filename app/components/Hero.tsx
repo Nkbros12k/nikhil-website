@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative flex items-center justify-center overflow-hidden pt-32 pb-20"
     >
       {/* Hero content */}
       <div className="relative z-10 text-center max-w-[700px] px-8">
