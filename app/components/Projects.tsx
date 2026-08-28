@@ -6,6 +6,28 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const projects = [
   {
+    title: "Gravity-Zero",
+    desc: "Fully local AI IDE. A three-agent triad (Planner, Coder, Reviewer) runs against a quantized Qwen 2.5 Coder 7B model served by LM Studio, with a Monaco-based editor and FastAPI backend. No data leaves the machine.",
+    image:
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    tags: ["Python", "FastAPI", "React", "LM Studio"],
+    gradient: "linear-gradient(135deg, #D2AB67 0%, #665DCD 100%)",
+    featured: true,
+    github: "https://github.com/Nkbros12k/gravity-zero",
+    live: "",
+  },
+  {
+    title: "Intel Data Center Analysis",
+    desc: "Analyzed 4M+ rows of hourly U.S. energy-generation data in Tableau to recommend a region for a new data center, building calculated fields, a parameter-driven dual-axis time series, a tree map, and an interactive dashboard. Recommended the Northwest on surplus capacity and a 52% renewable mix.",
+    image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    tags: ["Tableau", "Excel", "Data Viz"],
+    gradient: "linear-gradient(135deg, #5FA4E6 0%, #D2AB67 100%)",
+    featured: false,
+    github: "",
+    live: "",
+  },
+  {
     title: "NetSentinel",
     desc: "Real-time ML-powered network intrusion detection. XGBoost multi-class classifier on NSL-KDD (77% accuracy, 96% DoS precision), FastAPI backend with WebSocket threat broadcasts, React + 3D globe dashboard, and Kubernetes auto-scaling.",
     image:
@@ -69,17 +91,6 @@ const projects = [
     gradient: "linear-gradient(135deg, #D2AB67 0%, #5FA4E6 100%)",
     featured: false,
     github: "https://github.com/Nkbros12k/gemini-exporter",
-    live: "",
-  },
-  {
-    title: "Next.js Financial Dashboard",
-    desc: "Full-stack financial dashboard with authentication, invoicing, and customer management. Built with Next.js App Router, Postgres, and NextAuth.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    tags: ["Next.js", "Postgres", "NextAuth", "TypeScript"],
-    gradient: "linear-gradient(135deg, #5FA4E6 0%, #D2AB67 100%)",
-    featured: false,
-    github: "https://github.com/Nkbros12k/nextjs-dashboard",
     live: "",
   },
   {

@@ -6,6 +6,20 @@ import { Award, Shield, Trophy, GraduationCap } from "lucide-react";
 const certifications = [
   {
     icon: Shield,
+    title: "CompTIA Network+ and Security+",
+    org: "CompTIA (in progress)",
+    desc: "Currently working through both certifications to formalize networking and security fundamentals.",
+    color: "#D2AB67",
+  },
+  {
+    icon: Award,
+    title: "Global Career Accelerator",
+    org: "UT Austin / Podium Education",
+    desc: "Data analytics track covering Excel and Tableau. Finished at 104.75% with capstone projects scoring 220/200 and 209/200.",
+    color: "#5FA4E6",
+  },
+  {
+    icon: Shield,
     title: "National Cyber Scholar",
     org: "National Cyber Scholarship Foundation",
     desc: "Awarded for demonstrating advanced cybersecurity skills through a rigorous national competition.",
