@@ -90,9 +90,17 @@ function WorkGrid({ track }: { track: Track }) {
             <motion.div
               {...reveal}
               key={w.title}
-              className="relative flex flex-col p-7 rounded-2xl border border-white/8"
+              className="relative flex flex-col p-7 rounded-2xl border border-white/8 overflow-hidden"
               style={glass}
             >
+              {w.image && (
+                <div
+                  className="-mx-7 -mt-7 mb-6 h-[200px] overflow-hidden border-b border-white/8"
+                  style={{ background: "#191b1f" }}
+                >
+                  <img src={w.image.src} alt={w.image.alt} loading="lazy" className="w-full h-full object-cover object-top" />
+                </div>
+              )}
               <h3 className="text-white" style={{ ...inter, fontWeight: 600, fontSize: "19px" }}>
                 {w.title}
               </h3>

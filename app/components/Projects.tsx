@@ -10,7 +10,8 @@ const projects = [
     title: "Gravity-Zero",
     desc: "Fully local AI IDE. A three-agent triad (Planner, Coder, Reviewer) runs against a quantized Qwen 2.5 Coder 7B model served by LM Studio, with a Monaco-based editor and FastAPI backend. No data leaves the machine.",
     image:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "/work/gravity-zero/ide.jpg",
+    screenshot: true,
     tags: ["Python", "FastAPI", "React", "LM Studio"],
     gradient: "linear-gradient(135deg, #D2AB67 0%, #665DCD 100%)",
     featured: true,
@@ -21,7 +22,8 @@ const projects = [
     title: "Intel Data Center Analysis",
     desc: "Analyzed 4M+ rows of hourly U.S. energy-generation data in Tableau to recommend a region for a new data center, building calculated fields, a parameter-driven dual-axis time series, a tree map, and an interactive dashboard. Recommended the Northwest on surplus capacity and a 52% renewable mix.",
     image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "/work/intel/energy-by-region.jpg",
+    screenshot: true,
     tags: ["Tableau", "Excel", "Data Viz"],
     gradient: "linear-gradient(135deg, #5FA4E6 0%, #D2AB67 100%)",
     featured: false,
@@ -32,7 +34,8 @@ const projects = [
     title: "NetSentinel",
     desc: "Real-time ML-powered network intrusion detection. XGBoost multi-class classifier on NSL-KDD (77% accuracy, 96% DoS precision), FastAPI backend with WebSocket threat broadcasts, React + 3D globe dashboard, and Kubernetes auto-scaling.",
     image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "/work/netsentinel/dashboard.jpg",
+    screenshot: true,
     tags: ["Python", "XGBoost", "FastAPI", "Kubernetes"],
     gradient: "linear-gradient(135deg, #665DCD 0%, #5FA4E6 100%)",
     featured: true,
@@ -56,7 +59,8 @@ const projects = [
     title: "SBI Reports Feature",
     desc: "Supabase-backed Reports feature for the UT Austin Sustainable Building Initiative org website. Postgres schema, validated image storage bucket, and Next.js front-end integration, shipped end to end.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "/work/sbi/website.jpg",
+    screenshot: true,
     tags: ["Next.js", "Supabase", "Postgres", "Bun"],
     gradient: "linear-gradient(135deg, #D2AB67 0%, #665DCD 100%)",
     featured: true,
@@ -67,7 +71,8 @@ const projects = [
     title: "TradBot",
     desc: "Algorithmic paper trading bot using RSI + SMA signals with auto take-profit at +3% and stop-loss at -1.5%. Live Flask dashboard with 15s auto-refresh, day P/L, open positions, and full trade feed. Market-hours aware.",
     image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "/work/tradbot/backtest.jpg",
+    screenshot: true,
     tags: ["Python", "Flask", "RSI", "SMA"],
     gradient: "linear-gradient(135deg, #5FA4E6 0%, #665DCD 100%)",
     featured: false,
@@ -78,7 +83,7 @@ const projects = [
     title: "Blood Buddy",
     desc: "Nonprofit platform connecting 8,000+ global blood donors and recipients, matching by location and blood type. Enabled 100+ successful transfers worldwide. Founded as a high-schooler.",
     image:
-      "https://images.unsplash.com/photo-1615461066841-6116e61058f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "",
     tags: ["Full-Stack", "Database", "Nonprofit"],
     caseStudy: "blood-buddy",
     gradient: "linear-gradient(135deg, #665DCD 0%, #D2AB67 100%)",
@@ -88,9 +93,10 @@ const projects = [
   },
   {
     title: "Gemini Chat Exporter",
-    desc: "Public Chrome extension that exports Google Gemini conversations to JSON, Markdown, TXT, CSV, or PDF with one click.",
+    desc: "Open-source Chrome extension, shipped through GitHub releases, that exports Google Gemini conversations to JSON, Markdown, TXT, CSV, or PDF with one click.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "/work/gemini/popup.jpg",
+    screenshot: true,
     tags: ["JavaScript", "Chrome Ext", "PDF Export"],
     gradient: "linear-gradient(135deg, #D2AB67 0%, #5FA4E6 100%)",
     featured: false,
@@ -101,7 +107,8 @@ const projects = [
     title: "DataHack 2026",
     desc: "UT Austin MLDS competition: predicted music streaming skip behavior and optimized customer lifetime value using UMAP clustering and ensemble ML models.",
     image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "/work/datahack/title.jpg",
+    screenshot: true,
     tags: ["Python", "LightGBM", "CatBoost", "UMAP"],
     gradient: "linear-gradient(135deg, #665DCD 0%, #5FA4E6 100%)",
     featured: false,

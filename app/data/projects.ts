@@ -209,6 +209,11 @@ const written: Project[] = [
     scale: "~10 person team",
     domain: "Computer vision",
     accent: "linear-gradient(135deg, #D2AB67 0%, #665DCD 100%)",
+    cover: {
+      src: "/work/drone/pipeline.jpg",
+      alt: "Four-step pipeline on road test tiles: raw frame, model detections in red boxes, crack traced by a color filter, and a length estimate calibrated from the lane line",
+      caption: "The pipeline end to end: raw frame, detections from our model, the traced crack, and a length estimate calibrated from the lane line. Lengths on these close-up test tiles are illustrative.",
+    },
     summary:
       "Lead the technical side of a research team using drone imagery to detect road cracks and stitch them into a single georeferenced map.",
     beats: [
@@ -224,6 +229,11 @@ const written: Project[] = [
           {
             what: "Built an end-to-end proof of concept in days, at zero cloud cost",
             why: "A working pipeline (video sliced into ~785 road-cropped frames, then a YOLOv11 crack detector trained locally on GPU) settled arguments that would otherwise have run for weeks.",
+            figure: {
+              src: "/work/drone/held-out.jpg",
+              alt: "Six held-out test images with human labels in green and model detections in red with confidence scores",
+              caption: "The trained model on held-out images it never saw. Green boxes are human labels; red boxes are detections from our model.",
+            },
           },
           {
             what: "Authored the research brief setting technical direction",
@@ -235,7 +245,12 @@ const written: Project[] = [
           },
           {
             what: "Diagnosed a camera-angle domain gap",
-            why: "Our training data was forward-facing; the drone captures top-down nadir. Catching that mismatch early redirected the whole data-collection strategy rather than producing a model that quietly failed in the field.",
+            why: "The public data the model learned from was shot top-down, but our first field footage came from a forward-facing GoPro. Catching that mismatch early moved the team to top-down (nadir) drone capture, rather than producing a model that quietly failed in the field.",
+            figure: {
+              src: "/work/drone/domain-gap.jpg",
+              alt: "Side by side: a top-down public benchmark road image with detected cracks, and a forward-facing GoPro frame of our road",
+              caption: "Left: the public Road Scan benchmark (CC BY 4.0), shot top-down. Right: a frame from our own forward-facing GoPro footage.",
+            },
           },
         ],
       },

@@ -17,6 +17,8 @@ export type TrackWork = {
   tags: string[];
   caseStudy?: string;
   href?: string;
+  /** A real image of the work; omitted rather than faked. */
+  image?: { src: string; alt: string };
 };
 
 export type Track = {
@@ -278,12 +280,14 @@ export const tracks: Track[] = [
     work: [
       {
         title: "Drone road-inspection research brief",
+        image: { src: "/work/drone/pipeline.jpg", alt: "Crack detection pipeline on road test tiles, from raw frame to length estimate" },
         desc: "Authored the research brief setting technical direction across detection (YOLO vs segmentation vs VLM) and stitching (WebODM photogrammetry vs panorama), then split a ~10 person team into two sub-teams and set the data-collection strategy. Diagnosed a camera-angle domain gap that redirected the team's collection approach.",
         tags: ["Research", "Technical strategy", "Computer vision"],
         caseStudy: "drone",
       }, // master-consulting.html, cv.md
       {
         title: "Intel data center capstone",
+        image: { src: "/work/intel/energy-by-region.jpg", alt: "Tableau line chart of U.S. energy generation by source across 2022" },
         desc: "Analyzed 4M+ rows of hourly U.S. energy-generation data in Tableau to recommend a data-center region, building calculated fields, a parameter-driven dual-axis time series, a tree map, and an interactive dashboard. Recommended the Northwest on surplus capacity and a 52% renewable mix (scored 209/200).",
         tags: ["Tableau", "Data analysis", "Recommendation"],
       }, // master-consulting.html, gca-resume-material.md
@@ -299,6 +303,7 @@ export const tracks: Track[] = [
       }, // master-consulting.html, gca-resume-material.md
       {
         title: "DataHack 2026, 5th place",
+        image: { src: "/work/datahack/title.jpg", alt: "Title slide of the DataHack 2026 deck: Predicting Skips. Retaining Listeners." },
         desc: "Built skip-prediction and customer-lifetime-value models across a large music listening-history dataset at UT Austin MLDS's DataHack 2026, placing 5th.",
         tags: ["Python", "LightGBM", "CatBoost", "UMAP"],
       }, // master-consulting.html
@@ -426,6 +431,7 @@ export const tracks: Track[] = [
     work: [
       {
         title: "Perspect",
+        image: { src: "/work/perspect/debate.jpg", alt: "Perspect debate view with sources and expert personas" },
         desc: "Designed, built, and shipped a full-stack AI product solo where a panel of expert AI personas debates a topic and outputs a structured briefing with cited sources; top-20 at the Claude Hackathon 2026. Ran a first classroom beta with real student users and self-funded it under a Gemini spend guard; now in closed-beta iteration.",
         tags: ["Founder", "AI product", "Classroom beta"],
         caseStudy: "perspect",
@@ -439,6 +445,7 @@ export const tracks: Track[] = [
       }, // _business_resume.html, cv.md
       {
         title: "Intel data center capstone",
+        image: { src: "/work/intel/energy-by-region.jpg", alt: "Tableau line chart of U.S. energy generation by source across 2022" },
         desc: "Analyzed 4M+ rows of hourly U.S. energy-generation data in Tableau to recommend a region for a new data center, comparing regional net production, renewable share, and generation by source in an interactive dashboard. Recommended the Northwest on surplus capacity and a 52% renewable mix.",
         tags: ["Tableau", "Data analysis", "Dashboards"],
       }, // _business_resume.html, gca-resume-material.md
