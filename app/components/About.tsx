@@ -33,7 +33,7 @@ export function About() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-5 border border-white/10 text-[13px]"
             style={{
               background: "rgba(102,93,205,0.1)",
-              color: "#665DCD",
+              color: "#9D96E8",
               fontFamily: "Inter, sans-serif",
             }}
           >

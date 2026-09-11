@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export function Hero() {
   const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("explore")?.scrollIntoView({ behavior: "smooth" });
   };
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });

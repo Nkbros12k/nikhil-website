@@ -1,21 +1,25 @@
 import { Github, Linkedin } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { tracks } from "../data/tracks";
 
 export function Footer() {
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  // Contact lives on the home page, so from anywhere else go there first.
+  const goToContact = () => {
+    if (pathname !== "/") {
+      navigate("/#contact");
+      return;
+    }
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const links = [
-    { label: "Home", id: "home" },
-    { label: "About", id: "about" },
-    { label: "Skills", id: "skills" },
-    { label: "Projects", id: "projects" },
-    { label: "Contact", id: "contact" },
-  ];
+  const links = [{ label: "Home", to: "/" }, ...tracks.map((t) => ({ label: t.label, to: `/${t.slug}` }))];
 
   const socials = [
-    { icon: Github, href: "https://github.com/Nkbros12k" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/nikhil-kadiyala-70065b256/" },
+    { icon: Github, href: "https://github.com/Nkbros12k", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/nikhil-kadiyala-70065b256/", label: "LinkedIn" },
   ];
 
   return (
@@ -51,26 +55,36 @@ export function Footer() {
           </div>
 
           {/* Nav links */}
-          <div className="flex items-center gap-6 flex-wrap justify-center">
+          <nav aria-label="Footer" className="flex items-center gap-6 flex-wrap justify-center">
             {links.map((link) => (
-              <button
-                key={link.label}
-                onClick={() => scrollTo(link.id)}
+              <Link
+                key={link.to}
+                to={link.to}
                 className="text-[#888] hover:text-white transition-colors text-[13px]"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
-          </div>
+            <button
+              onClick={goToContact}
+              className="text-[#888] hover:text-white transition-colors text-[13px]"
+              style={{ fontFamily: "Inter, sans-serif" }}
+            >
+              Contact
+            </button>
+          </nav>
 
           {/* Socials */}
           <div className="flex items-center gap-3">
-            {socials.map((social, i) => (
+            {socials.map((social) => (
               <a
-                key={i}
+                key={social.label}
                 href={social.href}
-                className="w-9 h-9 rounded-lg flex items-center justify-center border border-white/10 text-[#888] hover:text-white hover:border-white/25 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                className="w-11 h-11 rounded-lg flex items-center justify-center border border-white/10 text-[#888] hover:text-white hover:border-white/25 transition-all"
                 style={{ background: "rgba(255,255,255,0.03)" }}
               >
                 <social.icon size={15} />
@@ -85,7 +99,7 @@ export function Footer() {
           style={{ borderColor: "rgba(255,255,255,0.05)" }}
         >
           <p
-            className="text-[#555] text-[13px] flex items-center justify-center gap-1"
+            className="text-[#888] text-[13px] flex items-center justify-center gap-1"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             © 2026 Nikhil Kadiyala. Modified from an online Figma theme ツ

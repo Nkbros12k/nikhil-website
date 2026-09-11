@@ -78,7 +78,7 @@ export function Contact() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-5 border border-white/10 text-[13px]"
             style={{
               background: "rgba(102,93,205,0.1)",
-              color: "#665DCD",
+              color: "#9D96E8",
               fontFamily: "Inter, sans-serif",
             }}
           >
@@ -224,7 +224,7 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label
+                    <label htmlFor="contact-name"
                       className="block text-[13px] text-[#888] mb-2"
                       style={{ fontFamily: "Inter, sans-serif" }}
                     >
@@ -233,6 +233,8 @@ export function Contact() {
                     <input
                       type="text"
                       value={form.name}
+                      id="contact-name"
+                      name="name"
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       placeholder="John Doe"
                       required
@@ -241,7 +243,7 @@ export function Contact() {
                     />
                   </div>
                   <div>
-                    <label
+                    <label htmlFor="contact-email"
                       className="block text-[13px] text-[#888] mb-2"
                       style={{ fontFamily: "Inter, sans-serif" }}
                     >
@@ -250,6 +252,8 @@ export function Contact() {
                     <input
                       type="email"
                       value={form.email}
+                      id="contact-email"
+                      name="email"
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       placeholder="john@example.com"
                       required
@@ -260,7 +264,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label
+                  <label htmlFor="contact-subject"
                     className="block text-[13px] text-[#888] mb-2"
                     style={{ fontFamily: "Inter, sans-serif" }}
                   >
@@ -269,6 +273,8 @@ export function Contact() {
                   <input
                     type="text"
                     value={form.subject}
+                    id="contact-subject"
+                    name="subject"
                     onChange={(e) => setForm({ ...form, subject: e.target.value })}
                     placeholder="Project Inquiry"
                     required
@@ -278,7 +284,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label
+                  <label htmlFor="contact-message"
                     className="block text-[13px] text-[#888] mb-2"
                     style={{ fontFamily: "Inter, sans-serif" }}
                   >
@@ -286,6 +292,8 @@ export function Contact() {
                   </label>
                   <textarea
                     value={form.message}
+                    id="contact-message"
+                    name="message"
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder="Tell me about your project..."
                     required

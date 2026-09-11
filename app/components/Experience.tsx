@@ -175,7 +175,7 @@ export function Experience() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-5 border border-white/10 text-[13px]"
             style={{
               background: "rgba(102,93,205,0.1)",
-              color: "#665DCD",
+              color: "#9D96E8",
               fontFamily: "Inter, sans-serif",
             }}
           >
@@ -296,7 +296,7 @@ export function Experience() {
                         className="text-[#b0b3b8] text-[14px] flex gap-3"
                         style={{ fontFamily: "Inter, sans-serif", lineHeight: "22px" }}
                       >
-                        <span className="text-[#555] mt-[6px] flex-shrink-0">&#8226;</span>
+                        <span className="text-[#8b8e94] mt-[6px] flex-shrink-0">&#8226;</span>
                         {point}
                       </li>
                     ))}

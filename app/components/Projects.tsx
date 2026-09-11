@@ -1,7 +1,8 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const projects = [
@@ -42,12 +43,14 @@ const projects = [
     title: "Perspect AI",
     desc: "Real-time AI debate engine where expert personas argue any topic, then generate a personalized study guide. Built at the Hooked on Claude Hackathon.",
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "/work/perspect/debate.jpg",
     tags: ["React", "Express", "Gemini AI", "SSE Streaming"],
     gradient: "linear-gradient(135deg, #5FA4E6 0%, #D2AB67 100%)",
     featured: true,
     github: "https://github.com/Nkbros12k/claudehackathon26",
-    live: "https://claudehackathon26-six.vercel.app",
+    live: "https://tryperspect.com",
+    caseStudy: "perspect",
+    screenshot: true,
   },
   {
     title: "SBI Reports Feature",
@@ -77,6 +80,7 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1615461066841-6116e61058f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
     tags: ["Full-Stack", "Database", "Nonprofit"],
+    caseStudy: "blood-buddy",
     gradient: "linear-gradient(135deg, #665DCD 0%, #D2AB67 100%)",
     featured: false,
     github: "",
@@ -108,7 +112,7 @@ const projects = [
     title: "FindMyItem App",
     desc: "ML-powered accessibility app using Google Teachable Machine to help seniors locate misplaced items. Trained a custom object recognition model with a senior-friendly interface.",
     image:
-      "https://images.unsplash.com/photo-1635488640163-e9bf90aaa30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "",
     tags: ["Python", "ML", "Accessibility"],
     gradient: "linear-gradient(135deg, #D2AB67 0%, #665DCD 100%)",
     featured: false,
@@ -119,7 +123,7 @@ const projects = [
     title: "Raspberry Pi Ecosystem",
     desc: "Automated ecosystem integrating a 3D printer, Pi-Hole ad-blocker, and remote access, all controlled via custom Python scripts on a Raspberry Pi.",
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "",
     tags: ["Raspberry Pi", "Python", "Pi-Hole", "Networking"],
     gradient: "linear-gradient(135deg, #5FA4E6 0%, #665DCD 100%)",
     featured: false,
@@ -192,7 +196,7 @@ export function Projects() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-5 border border-white/10 text-[13px]"
             style={{
               background: "rgba(102,93,205,0.1)",
-              color: "#665DCD",
+              color: "#9D96E8",
               fontFamily: "Inter, sans-serif",
             }}
           >
@@ -243,14 +247,18 @@ export function Projects() {
             >
               {/* Image */}
               <div className="relative h-[220px] overflow-hidden">
-                <ImageWithFallback
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                {/* Overlay */}
+                {project.image ? (
+                  <ImageWithFallback
+                    src={project.image}
+                    alt={project.title}
+                    className={`w-full h-full object-cover ${project.screenshot ? "object-top" : ""} group-hover:scale-105 transition-transform duration-700`}
+                  />
+                ) : (
+                  <div className="w-full h-full" style={{ background: "#191b1f" }} />
+                )}
+                {/* Overlay tints stock photos; a real screenshot stays readable. */}
                 <div
-                  className="absolute inset-0 opacity-60"
+                  className={`absolute inset-0 ${project.screenshot ? "opacity-0" : "opacity-60"}`}
                   style={{ background: project.gradient }}
                 />
                 {/* Links */}
@@ -258,6 +266,7 @@ export function Projects() {
                   {project.github && (
                     <a
                       href={project.github}
+                      aria-label={`${project.title} on GitHub`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-9 h-9 rounded-full flex items-center justify-center border border-white/20"
@@ -269,6 +278,7 @@ export function Projects() {
                   {project.live && (
                     <a
                       href={project.live}
+                      aria-label={`${project.title} live site`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-9 h-9 rounded-full flex items-center justify-center border border-white/20"
@@ -311,6 +321,16 @@ export function Projects() {
                     <GradientTag key={tag} text={tag} />
                   ))}
                 </div>
+                {project.caseStudy && (
+                  <Link
+                    to={`/work/${project.caseStudy}`}
+                    className="inline-flex items-center gap-1.5 mt-5 text-[14px] text-[#7DC4F8] hover:text-white transition-colors"
+                    style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
+                  >
+                    Read case study
+                    <ArrowUpRight size={15} />
+                  </Link>
+                )}
               </div>
             </motion.div>
           ))}

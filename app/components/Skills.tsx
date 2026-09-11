@@ -85,7 +85,7 @@ export function Skills() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-5 border border-white/10 text-[13px]"
             style={{
               background: "rgba(102,93,205,0.1)",
-              color: "#665DCD",
+              color: "#9D96E8",
               fontFamily: "Inter, sans-serif",
             }}
           >
@@ -209,7 +209,7 @@ export function Skills() {
         >
           <div
             className="text-center mb-5 text-[13px] tracking-widest uppercase"
-            style={{ fontFamily: "Inter, sans-serif", color: "#555" }}
+            style={{ fontFamily: "Inter, sans-serif", color: "#8b8e94" }}
           >
             Tech I work with
           </div>
