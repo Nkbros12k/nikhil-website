@@ -263,8 +263,7 @@ export const tracks: Track[] = [
       "I 310D Introduction to Human-Centered Data Science (in progress)",
       "I 305 Research Methods for Informatics",
       "I 303 Ethical Foundations of Informatics",
-      "I 306 Statistics for Informatics",
-      "AET 304 Foundations of Arts & Entertainment Technology",
+      "AET 304 Foundations of Arts & Entertainment Technology (in progress)",
     ],
   },
   {
