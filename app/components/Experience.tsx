@@ -71,9 +71,20 @@ const experiences = [
     color: "#665DCD",
   },
   {
-    role: "Tech Director + External Technologies (Incoming)",
+    role: "Tech Analyst, Fall 2026 Analyst Class",
+    company: "Texas NOVA Consulting",
+    period: "Sep 2026 to Present",
+    location: "Austin, TX",
+    points: [
+      "Selected through a competitive application and panel case interview for UT Austin's student-run AI and technology consulting organization",
+      "Completing case-based training and technical analysis this semester, moving into a full client consulting engagement in Spring 2027",
+    ],
+    color: "#5FA4E6",
+  },
+  {
+    role: "Tech Director + External Technologies",
     company: "Sustainable Building Initiative",
-    period: "Starting Fall 2026",
+    period: "Aug 2026 to Present",
     location: "Austin, TX",
     points: [
       "Leading a 10 to 15 person tech team building the organization website and related technical projects",
@@ -88,7 +99,7 @@ const experiences = [
   {
     role: "Software Developer, Tech Team",
     company: "Sustainable Building Initiative",
-    period: "Feb 2026 to Present",
+    period: "Feb 2026 to Aug 2026",
     location: "Austin, TX",
     points: [
       "Designed and shipped the Reports feature end to end using Supabase (Postgres + storage bucket with image validation)",

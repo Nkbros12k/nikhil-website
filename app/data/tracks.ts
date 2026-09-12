@@ -273,7 +273,7 @@ export const tracks: Track[] = [
     titleAccent: "Strategy",
     blurb: "ESG consulting, research direction, and data-driven recommendations that connect technical work to business decisions.",
     intro:
-      "I work where technical work meets business decisions. As an ESG consulting intern at ICELIS Global I delivered about 90 slides of client training material on IFRS S1/S2, GRI Standards, and the GCC regulatory landscape. At UT Austin I hold concurrent tech and business leadership roles at the Sustainable Building Initiative, and I turn data into recommendations in Tableau and Excel.",
+      "I work where technical work meets business decisions. As an ESG consulting intern at ICELIS Global I delivered about 90 slides of client training material on IFRS S1/S2, GRI Standards, and the GCC regulatory landscape. At UT Austin I hold concurrent tech and business leadership roles at the Sustainable Building Initiative, I'm a Tech Analyst in Texas NOVA Consulting's Fall 2026 Analyst Class, and I turn data into recommendations in Tableau and Excel.",
     resume: "/resume/Nikhil-Kadiyala-Resume-Consulting.pdf",
     showcase: "work",
     work: [
@@ -319,6 +319,16 @@ export const tracks: Track[] = [
           "Partner with leadership as Co Vice Director on operational oversight, performance tracking, and data-driven analysis that informs club strategy and resource decisions",
         ],
       }, // master-consulting.html
+      {
+        org: "Texas NOVA Consulting (UT Austin)",
+        role: "Tech Analyst, Fall 2026 Analyst Class",
+        when: "Sep 2026 to Present",
+        where: "Austin, TX",
+        bullets: [
+          "Selected through a competitive application and panel case interview for UT Austin's student-run AI and technology consulting organization",
+          "Completing case-based training and technical analysis this semester, moving into a full client consulting engagement in Spring 2027",
+        ],
+      }, // master-consulting.html, NOVA-Consulting/nova-consulting-context-capture.md
       {
         org: "Hindu Charities for America",
         role: "Tech Lead, AI with All Hackathon",
