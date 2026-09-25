@@ -29,18 +29,48 @@ export function About() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-5 border border-white/10 text-[13px]"
-            style={{
-              background: "rgba(102,93,205,0.1)",
-              color: "#9D96E8",
-              fontFamily: "Inter, sans-serif",
-            }}
-          >
-            About Me
-          </div>
-          <h2
-            className="text-white mb-6"
+          <div className="flex flex-col sm:flex-row sm:items-start gap-8 mb-6">
+            {/* Headshot, with the same gradient the rest of the page uses as a ring */}
+            <div
+              className="shrink-0 mx-auto sm:mx-0 rounded-2xl p-[2px]"
+              style={{
+                background:
+                  "linear-gradient(163.15deg, #665DCD 0%, #5FA4E6 44.76%, #D2AB67 100%)",
+              }}
+            >
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="/headshot-400.webp 400w, /headshot.webp 800w"
+                  sizes="(max-width: 640px) 160px, 200px"
+                />
+                <img
+                  src="/headshot.jpg"
+                  srcSet="/headshot-400.jpg 400w, /headshot.jpg 800w"
+                  sizes="(max-width: 640px) 160px, 200px"
+                  width={200}
+                  height={200}
+                  loading="lazy"
+                  decoding="async"
+                  alt="Nikhil Kadiyala"
+                  className="block rounded-2xl w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] object-cover"
+                />
+              </picture>
+            </div>
+
+            <div>
+              <div
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-5 border border-white/10 text-[13px]"
+                style={{
+                  background: "rgba(102,93,205,0.1)",
+                  color: "#9D96E8",
+                  fontFamily: "Inter, sans-serif",
+                }}
+              >
+                About Me
+              </div>
+              <h2
+                className="text-white mb-0"
             style={{
               fontFamily: "Inter, sans-serif",
               fontWeight: 700,
@@ -61,7 +91,9 @@ export function About() {
             >
               real things.
             </span>
-          </h2>
+              </h2>
+            </div>
+          </div>
           <p
             className="text-[#b0b3b8] mb-5"
             style={{ fontFamily: "Inter, sans-serif", fontSize: "17px", lineHeight: "28px" }}
