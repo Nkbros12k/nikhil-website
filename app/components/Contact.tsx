@@ -52,7 +52,7 @@ export function Contact() {
 
   const socials = [
     { icon: Github, href: "https://github.com/Nkbros12k", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/nikhil-kadiyala-70065b256/", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/nikhilkadiyala/", label: "LinkedIn" },
   ];
 
   return (
