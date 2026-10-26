@@ -28,8 +28,6 @@ export type Project = {
   /** Short right-hand column in the index: scale, users, or outcome. */
   scale: string;
   domain: string;
-  /** Card and cover gradient, drawn from the site palette. */
-  accent: string;
   /** A real screenshot of the work. Omitted rather than faked with stock imagery. */
   cover?: Figure;
   /** Shown on the index under the title. Two sentences at most. */
@@ -48,7 +46,6 @@ const written: Project[] = [
     role: "Tech Lead and designer",
     scale: "~600 students",
     domain: "Event tooling",
-    accent: "linear-gradient(135deg, #665DCD 0%, #5FA4E6 100%)",
     cover: {
       src: "/work/hc4a/cover.jpg",
       alt: "Three screens from the AI with All app: the student dashboard, judge scoring, and the broadcast composer",
@@ -143,7 +140,6 @@ const written: Project[] = [
     role: "Founder, solo",
     scale: "Top 20, Claude Hackathon",
     domain: "AI product",
-    accent: "linear-gradient(135deg, #5FA4E6 0%, #D2AB67 100%)",
     cover: {
       src: "/work/perspect/debate.jpg",
       alt: "Perspect debate view: a question, six web sources, and a panel of personas each arguing a position",
@@ -208,7 +204,6 @@ const written: Project[] = [
     role: "Tech Lead",
     scale: "~10 person team",
     domain: "Computer vision",
-    accent: "linear-gradient(135deg, #D2AB67 0%, #665DCD 100%)",
     cover: {
       src: "/work/drone/pipeline.jpg",
       alt: "Four-step pipeline on road test tiles: raw frame, model detections in red boxes, crack traced by a color filter, and a length estimate calibrated from the lane line",
@@ -271,7 +266,6 @@ const written: Project[] = [
     role: "Founder, now handed off",
     scale: "8,000+ donors",
     domain: "Consumer product",
-    accent: "linear-gradient(135deg, #665DCD 0%, #D2AB67 100%)",
     summary:
       "A legacy consumer product I founded in high school to connect blood donors with people who need them. It grew to over 8,000 donors and 100+ transfers before I handed it off.",
     beats: [
