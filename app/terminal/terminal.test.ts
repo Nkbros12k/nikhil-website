@@ -11,6 +11,7 @@ import type { Block } from "./types";
 
 const home = { cwd: [] as string[] };
 
+const last = <T,>(items: T[]) => items[items.length - 1];
 const textOf = (blocks: Block[]) => JSON.stringify(blocks);
 
 describe("commands", () => {
@@ -31,7 +32,7 @@ describe("commands", () => {
   });
 
   it("resolves a résumé for each track", () => {
-    for (const t of tracks) expect(run(`/resume ${t.slug}`, home).blocks.at(-1)).toMatchObject({ type: "resume", track: t.slug });
+    for (const t of tracks) expect(last(run(`/resume ${t.slug}`, home).blocks)).toMatchObject({ type: "resume", track: t.slug });
   });
 
   it("rejects an unknown slug without opening anything", () => {
@@ -42,7 +43,7 @@ describe("commands", () => {
   it("routes plain-language questions to the right command", () => {
     expect(run("what projects have you built", home).blocks[0]).toMatchObject({ call: "Read(projects/)" });
     expect(run("tell me about your experience", home).blocks[0]).toMatchObject({ call: "Read(experience/)" });
-    expect(run("send me your ux resume", home).blocks.at(-1)).toMatchObject({ type: "resume", track: "ux" });
+    expect(last(run("send me your ux resume", home).blocks)).toMatchObject({ type: "resume", track: "ux" });
   });
 
   it("falls back to suggestions for input it cannot match", () => {
