@@ -103,7 +103,7 @@ export function BlockView({ block, onRun }: Props) {
     case "tool":
       return (
         <div className="nk-tool">
-          <div><span className="dot">● </span>{block.call}</div>
+          <div><span className="dot">● </span><span className="call">{block.call}</span></div>
           {block.result.map((r) => <div className="res" key={r}>⎿ {r}</div>)}
         </div>
       );

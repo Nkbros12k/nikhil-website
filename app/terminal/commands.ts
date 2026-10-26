@@ -34,6 +34,14 @@ const HELP: Record<string, string> = {
   "/extras": "outside of code",
 };
 
+/** Entries shown in the slash menu while typing a command. */
+export const MENU: { cmd: string; hint: string }[] = [
+  ...Object.keys(HELP).map((cmd) => ({ cmd, hint: HELP[cmd] })),
+  { cmd: "/help", hint: "every command" },
+  { cmd: "/plain", hint: "the same content as a normal page" },
+  { cmd: "/clear", hint: "clear the screen" },
+];
+
 const trackSlugs = tracks.map((t) => t.slug as string);
 
 const whoami: Handler = () =>
