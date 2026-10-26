@@ -8,7 +8,7 @@ export const profile = {
   location: "Austin, TX",
   school:
     "UT Austin, BS in Informatics with focus areas in Human-Centered Data Science and Cybersecurity, working toward the Computer Science certificate",
-  tagline: "I build products end to end, from the AI backend to the screen it shows up on.",
+  tagline: "informatics @ ut austin",
   whoami: [
     "I'm Nikhil, an informatics student at UT Austin in Austin, Texas.",
     "I build full-stack AI products and the infrastructure under them. I founded Perspect, a tool where a panel of AI experts debates any question, and I lead the technical side of a drone road-inspection research team.",
