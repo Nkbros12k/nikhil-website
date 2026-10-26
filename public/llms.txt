@@ -1,0 +1,19 @@
+# Nikhil Kadiyala
+
+> Informatics at UT Austin in Austin, Texas. Builds full-stack AI products and the infrastructure under them.
+
+The site is a terminal. A plain page with the same content is at /plain.
+
+## Pages
+
+- [Plain view](https://nikhilkadiyala-portfolio.vercel.app/plain): experience, projects, skills and contact in one page
+- [Software résumé](https://nikhilkadiyala-portfolio.vercel.app/resume/Nikhil-Kadiyala-Resume-CS.pdf)
+- [UX résumé](https://nikhilkadiyala-portfolio.vercel.app/resume/Nikhil-Kadiyala-Resume-UX.pdf)
+- [Consulting résumé](https://nikhilkadiyala-portfolio.vercel.app/resume/Nikhil-Kadiyala-Resume-Consulting.pdf)
+- [Business résumé](https://nikhilkadiyala-portfolio.vercel.app/resume/Nikhil-Kadiyala-Resume-Business.pdf)
+
+## Contact
+
+- Email nikhilkadiyala44@gmail.com
+- GitHub https://github.com/Nkbros12k
+- LinkedIn https://www.linkedin.com/in/nikhilkadiyala/
