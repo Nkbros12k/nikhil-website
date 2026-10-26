@@ -47,7 +47,7 @@ export const skills: Skill[] = [
   },
   {
     name: "mcp-and-agents",
-    description: "Gives AI agents tools they can call safely against a real API.",
+    description: "Gives AI agents tools they can call safely against an API.",
     triggers: ["tool calling", "agent orchestration", "schema generation"],
     tools: ["MCP", "multi-agent orchestration", "Python", "C#/.NET"],
     evidence: [{ label: "BizFirst AI internship" }, { label: "Gravity-Zero" }],
@@ -61,7 +61,7 @@ export const skills: Skill[] = [
   },
   {
     name: "product-design-and-research",
-    description: "Designs the flow, tests it with real users, then builds it in code.",
+    description: "Designs the flow, tests it with users, then builds it in code.",
     triggers: ["onboarding", "event apps", "user research"],
     tools: ["Figma", "wireframing", "usability testing", "React"],
     evidence: [{ label: "AI with All participant app", slug: "hc4a" }, { label: "Perspect", slug: "perspect" }],
