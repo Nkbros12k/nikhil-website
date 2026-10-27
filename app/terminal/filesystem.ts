@@ -15,7 +15,7 @@ export type Node = {
 
 const ORG_SHORT: [RegExp, string][] = [
   [/sustainable building/i, "sbi"],
-  [/hc4a/i, "hc4a"],
+  [/hc4a|hindu charities/i, "hc4a"],
   [/bizfirst/i, "bizfirst"],
   [/drone/i, "drone-research"],
   [/icelis/i, "icelis"],
@@ -27,19 +27,31 @@ const shortOrg = (org: string) => ORG_SHORT.find(([re]) => re.test(org))?.[1] ??
 
 type Role = TrackRole & { slug: string };
 
+const withUniqueSlugs = (items: Role[]): Role[] => {
+  const used = new Map<string, number>();
+  return items.map((item) => {
+    const count = (used.get(item.slug) ?? 0) + 1;
+    used.set(item.slug, count);
+    return count === 1 ? item : { ...item, slug: `${item.slug}-${count}` };
+  });
+};
+
+
 const buildRoles = (): Role[] => {
   const seen = new Set<string>();
   const unique = tracks.flatMap((t) => t.experience).filter((r) => {
-    const key = `${r.org}|${r.role}`;
+    const key = `${shortOrg(r.org)}|${r.when}`;
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
   });
-  return unique.map((r) => {
+  const shaped = unique.map((r) => {
     const base = shortOrg(r.org);
     const clash = unique.filter((o) => shortOrg(o.org) === base).length > 1;
-    return { ...r, slug: clash ? `${base}-${kebab(r.role)}` : base };
+    const suffix = kebab(r.role).split("-").slice(0, 2).join("-");
+    return { ...r, slug: clash ? `${base}-${suffix}` : base };
   });
+  return withUniqueSlugs(shaped);
 };
 
 export const roles = buildRoles();

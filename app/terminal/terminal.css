@@ -72,8 +72,8 @@
 .nk-list { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 6px; }
 .nk-list-title { color: var(--faint); padding: 4px 10px; font-size: 12px; }
 .nk-item { display: flex; gap: 14px; padding: 6px 10px; width: 100%; border-radius: 8px; }
-.nk-item .label { color: var(--accent); min-width: 22ch; flex: none; overflow-wrap: anywhere; }
-.nk-item .hint { color: var(--dim); }
+.nk-item .label { color: var(--accent); width: 26ch; flex: none; overflow-wrap: anywhere; }
+.nk-item .hint { color: var(--dim); flex: 1; min-width: 0; }
 .nk-item:hover { background: var(--raise); }
 
 .nk-role h3 { margin: 0; font-family: var(--serif); font-size: 18px; font-weight: 600; }
