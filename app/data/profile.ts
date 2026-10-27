@@ -10,10 +10,7 @@ export const profile = {
     "UT Austin, BS in Informatics with focus areas in Human-Centered Data Science and Cybersecurity, working toward the Computer Science certificate",
   tagline: "informatics @ ut austin",
   whoami: [
-    "I'm Nikhil, an informatics student at UT Austin in Austin, Texas.",
-    "I build full-stack AI products and the infrastructure under them. I founded Perspect, a tool where a panel of AI experts debates any question, and I lead the technical side of a drone road-inspection research team.",
-    "I run the tech team at the Sustainable Building Initiative, and I'm the tech lead for a hackathon app that serves around 600 students.",
-    "Outside of code I played violin for six years and I like cars.",
+    "I'm Nikhil, an informatics student at UT Austin. I like building things. I also like cars and I love working out.",
   ],
   now: [
     "Running Perspect, my solo AI product, with students testing it",
